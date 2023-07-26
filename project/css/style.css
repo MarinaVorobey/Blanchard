@@ -82,10 +82,6 @@ img {
   font-display: swap;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   min-width: 320px;
   font-family: 'OpenSans', 'sans-serif';
