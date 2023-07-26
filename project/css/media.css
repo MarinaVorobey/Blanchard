@@ -195,6 +195,10 @@
     scrollbar-width: none;
   }
 
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
   .nav__list {
     gap: 32px;
   }
