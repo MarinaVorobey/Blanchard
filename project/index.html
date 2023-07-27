@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard ‒ художественная галерея</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preload" href="css/style.css" as="font">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.svg">
@@ -52,11 +53,11 @@
   </header>
 
   <main class="main">
-
     <section class="hero">
       <div class="container">
+        <h1 class="visually-hidden">Blanchard ‒ художественная галерея</h1>
         <div class="hero__content">
-          <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
+          <p class="hero__title">Прикоснитесь к&nbsp;прекрасному</p>
           <p class="hero__descr">
             Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
             для новых предложений
@@ -281,10 +282,14 @@
         <h3 class="secondary-title projects__secondary-title">Партнёры проектов:</h3>
         <ul class="projects__list list-reset flex">
           <li class="projects__item">
-            <img class="projects__img" src="img/projects-img1.png" alt="Логотип компании-партнера">
+            <a class="projects__link" href="#" target="_blank">
+              <img class="projects__img" src="img/projects-img1.png" alt="Логотип компании-партнера">
+            </a>
           </li>
           <li class="projects__item">
-            <img class="projects__img" src="img/projects-img2.png" alt="Логотип компании-партнера">
+            <a class="projects__link" href="#" target="_blank">
+              <img class="projects__img" src="img/projects-img2.png" alt="Логотип компании-партнера">
+            </a>
           </li>
         </ul>
       </div>
@@ -304,31 +309,18 @@
             </p>
           </div>
           <form name="form" action="https://jsonplaceholder.typicode.com/posts" method="post"
-            class="form contacts__center">
-            <ul class="form__list list-reset flex">
-              <li class="form__item">
-                <label>
-                  <span class="visually-hidden">Введите свое имя</span>
-                  <input class="form__input" type="text" name="name" placeholder="Имя*" required>
-                </label>
-              </li>
-              <li class="form__item">
-                <label>
-                  <span class="visually-hidden">Введите свой телефон</span>
-                  <input class="form__input" type="tel" name="tel" placeholder="Телефон*" required>
-                </label>
-              </li>
-              <li class="form__item">
-                <button class="btn btn-reset form__button form__button--1" type="submit"
-                  aria-label="Кнопка для заказа обратного звонка">
-                  Заказать обратный звонок
-                </button>
-                <button class="btn btn-reset form__button form__button--2" type="submit"
-                  aria-label="Кнопка для заказа обратного звонка">
-                  Заказать
-                </button>
-              </li>
-            </ul>
+            class="form contacts__center flex">
+            <label class="form__item">
+              <span class="visually-hidden">Введите свое имя</span>
+              <input class="form__input" type="text" name="name" placeholder="Имя*" required>
+            </label>
+            <label class="form__item form__item--last">
+              <span class="visually-hidden">Введите свой телефон</span>
+              <input class="form__input" type="tel" name="tel" placeholder="Телефон*" required>
+            </label>
+            <button class="btn btn-reset form__button" type="submit" aria-label="Кнопка для заказа обратного звонка">
+              Заказать <span class="form__button-text">обратный звонок</span>
+            </button>
           </form>
           <div class="contacts__right">
             <h3 class="secondary-title contacts__secondary-title">Связаться в&nbsp;один клик</h3>
